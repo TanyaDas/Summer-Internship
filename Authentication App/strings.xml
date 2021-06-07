@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Memories</string>
+    <string name="sign_in">Sign In</string>
+    <string name="app_tagline">Create. Share. Like. </string>
+    <string name="Developed_by">Developed by Tanya Das</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="create_new">Create New</string>
+    <string name="query">=?</string>
+    <string name="success_message">Account Resgistered Successfully</string>
+    <string name="error_email_exists">"Email Id Already Exists! "</string>
+    <string name="error_invalid_username_or_password">Invalid Username or Password!</string>
+</resources>
