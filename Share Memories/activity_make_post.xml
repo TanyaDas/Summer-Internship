@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scrollview_makePost"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_shape_rectangle"
+    tools:context=".MakePost">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_cardView"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp"
+        app:contentPadding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/photo_imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/share_memories_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/caption_cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/image_cardView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/image_cardView"
+        app:layout_constraintTop_toBottomOf="@+id/image_cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/caption_multiAutoCompleteTextView"
+                style="@style/CaptionHastag"
+                android:completionHint="Add a Short Note.."
+                android:textColorHint="@color/black"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/black"
+                android:textColorHighlight="@color/black"
+                android:gravity="start|top"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView_caption"
+                app:layout_constraintStart_toStartOf="@+id/textView_caption"
+                app:layout_constraintTop_toBottomOf="@+id/textView_caption" />
+
+            <TextView
+                android:id="@+id/textView_caption"
+                style="@style/Headings"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/custom_shape"
+                android:text="Caption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="10dp"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/caption_cardView"
+        app:layout_constraintStart_toStartOf="@+id/caption_cardView"
+        app:layout_constraintTop_toBottomOf="@+id/caption_cardView" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_hastag"
+                style="@style/Headings"
+                android:background="@drawable/custom_shape"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Hastags"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/hastag_multiAutoCompleteTextView"
+                style="@style/CommonTextView"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/black"
+                android:cursorVisible="true"
+                android:textCursorDrawable="@color/black"
+                android:textColorHighlight="@color/black"
+                android:gravity="start|top"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView_hastag"
+                app:layout_constraintStart_toStartOf="@+id/textView_hastag"
+                app:layout_constraintTop_toBottomOf="@+id/textView_hastag" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Logout"
+        android:gravity="center"
+        android:text="Upload"
+        app:icon="@drawable/ic_baseline_save_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/colorPrimaryDark"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

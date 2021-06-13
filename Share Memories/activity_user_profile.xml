@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_shape_rectangle"
+        tools:context=".UserProfile">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_user_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp"
+            app:contentPadding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardView_user_display_picture"
+            app:layout_constraintTop_toBottomOf="@+id/AppTagLine_UserProfile">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Full_Name"
+                    style="@style/FullNameOfUser"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Tanya Das"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    style="@style/CommonTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="28tsd"
+                    app:layout_constraintEnd_toEndOf="@+id/Full_Name"
+                    app:layout_constraintStart_toStartOf="@+id/Full_Name"
+                    app:layout_constraintTop_toBottomOf="@+id/Full_Name" />
+
+                <TextView
+                    android:id="@+id/no_of_posts"
+                    style="@style/Numbers"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="0"
+                    app:layout_constraintBottom_toBottomOf="@+id/no_of_friends"
+                    app:layout_constraintEnd_toStartOf="@+id/no_of_friends"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/no_of_friends" />
+
+                <TextView
+                    android:id="@+id/no_of_friends"
+                    style="@style/Numbers"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/no_of_posts"
+                    app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+                <TextView
+                    android:id="@+id/Post_textView"
+                    style="@style/CommonTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Posts"
+                    app:layout_constraintBottom_toBottomOf="@+id/Friends_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/Friends_textView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/Friends_textView" />
+
+                <TextView
+                    android:id="@+id/Friends_textView"
+                    style="@style/CommonTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Friends"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Post_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/no_of_friends"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_user_display_picture"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="10dp"
+            app:contentPadding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView_user_details"
+            app:layout_constraintEnd_toStartOf="@+id/cardView_user_details"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardView_user_details">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/user_dp_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/share_memories_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/EditProfilebutton"
+            style="@style/Custom_Button"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/custom_button_sign_in_sign_up"
+            android:text="Edit Profile"
+            app:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/cardView_user_details"
+            app:layout_constraintStart_toStartOf="@+id/cardView_user_display_picture"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_user_details" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/search_friends"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginTop="70dp"
+            android:contentDescription="Make Friends"
+            android:gravity="center"
+            android:text="Search Friends"
+            app:iconTint="@color/colorPrimaryDark"
+            app:icon="@drawable/ic_baseline_search_24"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/EditProfilebutton"
+            app:layout_constraintStart_toStartOf="@+id/EditProfilebutton"
+            app:layout_constraintTop_toBottomOf="@+id/EditProfilebutton" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/add_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="Add Photo"
+            app:iconTint="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="Add Photo"
+            app:icon="@drawable/ic_baseline_add_a_photo_24"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/EditProfilebutton"
+            app:layout_constraintStart_toStartOf="@+id/EditProfilebutton"
+            app:layout_constraintTop_toBottomOf="@+id/search_friends" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/visit_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="Home Page"
+            android:gravity="center"
+            android:text="Browse"
+            app:icon="@drawable/ic_baseline_home_24"
+            app:iconTint="@color/colorPrimaryDark"
+            app:iconGravity="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/EditProfilebutton"
+            app:layout_constraintStart_toStartOf="@+id/EditProfilebutton"
+            app:layout_constraintTop_toBottomOf="@+id/add_photo" />
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="Logout"
+            android:gravity="center"
+            android:text="Logout"
+            app:icon="@drawable/ic_baseline_exit_to_app_24"
+            app:iconGravity="textStart"
+            app:iconTint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/visit_home"
+            app:layout_constraintVertical_bias="0.90999997" />
+
+        <TextView
+            android:id="@+id/AppTagLine_UserProfile"
+            style="@style/AppTagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/app_tagline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
