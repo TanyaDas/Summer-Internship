@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--For Titles -->
+    <style name="TitleUpdateWrite">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+    </style>
+
+    <!--For Prompt TextViews -->
+    <style name="PromptTextViews">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/DarkBlue</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small.Inverse</item>
+    </style>
+
+    <!--For Short Prompt TextViews -->
+    <style name="ShortPromptTextViews">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/DarkBlue</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small.Inverse</item>
+    </style>
+
+    <!--- For EditTextViews!-->
+    <style name="Custom_EditTextViews">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textColor">@color/DarkBlue</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColorHint">@color/DarkBlue</item>
+    </style>
+
+    <!--- For Button (Save) !-->
+    <style name="Custom_Button_Save_Update">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/DarkBlue</item>
+    </style>
+
+    <!--- For Button (View) !-->
+    <style name="Custom_Button_View">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+
+    <!--- For Button (Back) !-->
+    <style name="Custom_Button_Back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:fontFamily">@font/amaranth</item>
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+</resources>
